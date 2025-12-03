@@ -1,0 +1,65 @@
+
+        /* Apply Inter font and set base dark theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #f0f0f0;
+            line-height: 1.6;
+            /* --- UPDATED: Background Image from user's design ---
+               I'm referencing the uploaded file "backgroundImage.jpg" here. 
+               We'll use it for a fixed, cover background effect as seen in your layout.
+            */
+            background-color: #1a1a1a;
+            background-image: url('uploaded:backgroundImage.jpg-169a1f3b-3bd8-464b-8938-cd0138b25e34'); 
+            background-size: cover;
+            background-attachment: fixed; /* Ensures the background stays put while scrolling */
+            background-position: center top;
+        }
+
+        /* Removed custom gradient style for hero since we use a full background image */
+        #hero-section {
+            min-height: 90vh;
+            /* Ensure text is readable over the background image */
+            background-color: #1a1a1a80; /* Slight dark overlay */
+        }
+        
+        /* The header needs a more opaque background to ensure navigation is readable */
+        .header-bg {
+            background-color: #1a1a1a; /* Solid background for sticky header */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Custom styling for the folder animation effect */
+        .folder-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            background-color: #2e2e2e;
+            border: 1px solid #3d3d3d;
+        }
+
+        .folder-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            background-color: #383838;
+        }
+        
+        /* Utility for the pixel/blocky border effect behind the image */
+        .geometric-border {
+            position: relative;
+            z-index: 10;
+        }
+
+        .geometric-border::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background:
+                repeating-linear-gradient(45deg, #10b981 0, #10b981 2px, transparent 2px, transparent 10px),
+                repeating-linear-gradient(-45deg, #f97316 0, #f97316 2px, transparent 2px, transparent 10px);
+            background-size: 10px 10px;
+            opacity: 0.1;
+            border-radius: 1.5rem;
+            z-index: -1;
+        }

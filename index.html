@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maia's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+
+body {
+font-family: 'Inter', sans-serif;
+ color: #f0f0f0;
+line-height: 1.6;
+background-color: #1a1a1a;
+ background-image: url('backgroundImage.png');
+        background-size: cover;
+ background-attachment: fixed;
+background-position: center top;
+}
+
+#hero-section {
+min-height: 90vh;
+background-color: #1a1a1a80; 
+}
+
+ .header-bg {
+ background-color: #1a1a1a; 
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+ }
+
+.folder-stack {
+position: relative;
+}
+ .folder-item {
+ cursor: pointer;
+ }
+
+.header-bg nav div a.active {
+color: #fff !important;
+ text-shadow:
+0 0 5px #ffffff,
+0 0 10px #f0f0f0, 
+0 0 15px #ffffff;
+}
+
+.header-bg nav div a:hover {
+color: #fff !important;
+ text-shadow:
+ 0 0 5px #ffffff,
+0 0 10px #f0f0f0,
+0 0 15px #ffffff;
+ }
+
+.text-accent-glow {
+color: #fff; 
+text-shadow:
+0 0 5px #ffffff,
+0 0 10px #f0f0f0,
+0 0 15px #ffffff,
+0 0 20px rgba(255, 255, 255, 0.4); 
+ }
+
+.btn-accent-glow:hover {
+box-shadow:
+0 0 10px rgba(255, 255, 255, 0.8), 
+0 0 20px rgba(255, 255, 255, 0.6),
+0 0 30px rgba(255, 255, 255, 0.4);
+
+ transform: scale(1.02);
+}
+
+#about-section a:hover {
+color: #fff !important; 
+text-shadow:
+0 0 3px #ffffff,
+0 0 6px #f0f0f0;
+}
+
+#about-section a:hover img {
+transform: scale(1.1);
+transition: transform 0.2s ease-in-out;
+ }
+</style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50 header-bg shadow-md">
+    <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <a href="#hero-section" class="flex items-center text-xl font-bold tracking-wider text-white">
+            <img 
+                src="maia-logo.png"
+                onerror="this.onerror=null;this.src='https://placehold.co/32x32/1a1a1a/f0f0f0?text=Logo';"
+                alt="Maia's Logo" 
+            class="h-auto w-20 md:w-24 mr-2 object-contain"
+            />
+        </a>
+        <div class="space-x-8 text-sm font-medium">
+            <a href="#hero-section" class="transition duration-200">Home</a>
+            <a href="#about-section" class="transition duration-200">About</a>
+            <a href="#works-section" class="transition duration-200">Work</a>
+            <a href="#contact-section" class="transition duration-200">Contact</a>
+        </div>
+    </nav>
+</header>
+    <main>
+       
+        <section id="hero-section" class="py-20 lg:py-32 flex items-center">
+            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold mb-4 leading-tight">
+                        Hello! I'm <span class="text-accent-glow">Maia</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg mb-8 max-w-lg">
+                    an IT student with a passion for design and development. I like working on projects that challenge my creativity and help me grow.                    </p>
+                    <a href="#works-section" class="inline-block px-8 py-3 bg-white text-gray-900 font-semibold rounded-xl shadow-lg hover:bg-gray-200 transition duration-300 transform btn-accent-glow">
+                        View Work
+                    </a>
+                </div>
+
+                <div class="flex justify-center lg:justify-end">
+                    <div >
+                        <img 
+                            src="maiaImage (1).png"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x480/27272a/ffffff/png?text=Maia+Portrait+Placeholder';"
+                            alt="Maia's professional portrait" 
+                            class="w-full max-w-5xl h-auto object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="works-section" class="py-20 lg:py-32 bg-gray-900/80">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-center mb-16">
+            Selected Works
+        </h2>
+        <div class="folder-stack relative w-full max-w-md mx-auto h-96">
+            <a href="project1.html" class="folder-item absolute bottom-48 left-0 w-full h-64 z-10 hover:transform hover:-translate-y-2 transition duration-300">
+                <img 
+                    src="folder.png" 
+                    alt="Web Designing Folder" 
+                    class="w-full h-full object-contain"
+                    onerror="this.onerror=null;this.src='https://placehold.co/300x200/2e2e2e/ffffff?text=Folder+1';"
+                >
+                <div class="absolute top-4 left-4 bg-white/90 text-gray-900 px-2 py-1 rounded text-sm font-semibold shadow-md">
+                    Web/Mobile Design
+                </div>
+            </a>
+            <a href="project2.html" class="folder-item absolute bottom-24 left-0 w-full h-64 z-20 hover:transform hover:-translate-y-2 transition duration-300">
+                <img 
+                    src="folder.png" 
+                    alt="Systems Folder" 
+                    class="w-full h-full object-contain"
+                    onerror="this.onerror=null;this.src='https://placehold.co/300x200/2e2e2e/ffffff?text=Folder+2';"
+                >
+                <div class="absolute top-4 left-4 bg-white/90 text-gray-900 px-2 py-1 rounded text-sm font-semibold shadow-md">
+                    Online System
+                </div>
+            </a>
+            <a href="project3.html" class="folder-item absolute bottom-0 left-0 w-full h-64 z-30 hover:transform hover:-translate-y-2 transition duration-300">
+                <img 
+                    src="folder.png" 
+                    alt="HTML Works Folder" 
+                    class="w-full h-full object-contain"
+                    onerror="this.onerror=null;this.src='https://placehold.co/300x200/2e2e2e/ffffff?text=Folder+3';"
+                >
+                <div class="absolute top-4 left-4 bg-white/90 text-gray-900 px-2 py-1 rounded text-sm font-semibold shadow-md">
+                    HTML Works
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about-section" class="py-20 lg:py-32">
+    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-start">
+        <div>
+            <h2 class="text-4xl lg:text-5xl font-extrabold mb-6">
+                ABOUT ME
+            </h2>
+            <p class="text-gray-400 text-lg mb-8">
+                My name is Mary Joyce Degamo, and I am currently pursuing a Bachelor of Science in Information Technology. I am committed to developing my skills in design and software development, with a strong interest in creating clean, efficient, and user-focused digital solutions. I continuously seek opportunities to expand my knowledge and improve my competence in the IT field.
+            </p>
+
+            <div class="space-y-4">
+                <div class="flex items-center text-gray-300">
+                    <a href="https://www.facebook.com/mjoyce.degamo" target="_blank" class="flex items-center hover:text-white transition duration-200">
+                        <img 
+                            src="fb.png" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/20x20/ffffff/000000?text=FB';" 
+                            alt="Facebook Icon" 
+                            class="w-5 h-5 mr-3 object-contain"
+                        />
+                        Mary Joyce Degamo
+                    </a>
+                </div>
+                <div class="flex items-center text-gray-300">
+                    <a href="mailto:emjeydee23@gmail.com" class="flex items-center hover:text-white transition duration-200">
+                        <img 
+                            src="email.png" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/20x20/ffffff/000000?text=Email';" 
+                            alt="Email Icon" 
+                            class="w-5 h-5 mr-3 object-contain"
+                        />
+                        emjeydee23@gmail.com
+                    </a>
+                </div>
+                <div class="flex items-center text-gray-300">
+                    <a href="https://www.instagram.com/pancake.maia" target="_blank" class="flex items-center hover:text-white transition duration-200">
+                        <img 
+                            src="ig.png" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/20x20/ffffff/000000?text=IG';" 
+                            alt="Instagram Icon" 
+                            class="w-5 h-5 mr-3 object-contain"
+                        />
+                        pancake.maia
+                    </a>
+                </div>
+                <div class="flex items-center text-gray-300">
+                    <a href="https://github.com/maiahop" target="_blank" class="flex items-center hover:text-white transition duration-200">
+                        <img 
+                            src="github.png" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/20x20/ffffff/000000?text=Git';" 
+                            alt="Github Icon" 
+                            class="w-5 h-5 mr-3 object-contain"
+                        />
+                        github.com/maiahop
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:flex justify-center lg:justify-end">
+            <div class="border-2 border-white rounded-3xl p-4 shadow-2xl">
+                <img 
+                    src="maia2.png"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x480/27272a/ffffff/png?text=Maia+Portrait+Placeholder';"
+                    alt="Maia's professional portrait" 
+                    class="w-full max-w-sm h-auto object-cover rounded-2xl"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <section id="contact-section" class="py-20 lg:py-32 bg-gray-900/80">
+            <div class="container mx-auto px-4 flex justify-center">
+                <div class="w-full max-w-xl p-8 rounded-3xl bg-gray-800/70 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-gray-700">
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-center mb-4">
+                        Contact Me
+                    </h2>
+                    <p class="text-gray-400 text-center mb-8">
+                    Feel free to message me regarding collaborations, job opportunities, or general inquiries.
+                    </p>
+
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <input type="text" id="name" name="name" placeholder="Name *" required
+                                class="w-full p-3 rounded-xl bg-gray-700/50 border border-gray-600 focus:border-white focus:ring-1 focus:ring-white text-white placeholder-gray-400 outline-none transition duration-200"
+                            >
+                            <input type="email" id="email" name="email" placeholder="Email *" required
+                                class="w-full p-3 rounded-xl bg-gray-700/50 border border-gray-600 focus:border-white focus:ring-1 focus:ring-white text-white placeholder-gray-400 outline-none transition duration-200"
+                            >
+                        </div>
+                        <input type="text" id="subject" name="subject" placeholder="Subject *" required
+                            class="w-full p-3 rounded-xl bg-gray-700/50 border border-gray-600 focus:border-white focus:ring-1 focus:ring-white text-white placeholder-gray-400 outline-none transition duration-200"
+                        >
+                        <textarea id="message" name="message" placeholder="Message *" rows="5" required
+                            class="w-full p-3 rounded-xl bg-gray-700/50 border border-gray-600 focus:border-white focus:ring-1 focus:ring-white text-white placeholder-gray-400 outline-none resize-none transition duration-200"
+                        ></textarea>
+                        
+                        <div class="text-center pt-4">
+                            <button type="submit"
+                                class="px-10 py-3 bg-white text-gray-900 font-semibold rounded-xl shadow-lg hover:bg-gray-200 transition duration-300 transform btn-accent-glow"
+                            >
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-6 bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            &copy; 2025 Maia
+        </div>
+    </footer>
+
+    
+<script>
+    emailjs.init('4p-VDuL9VoCKU7qlz');
+
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            from_name: document.getElementById('name').value,
+            from_email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value,
+        };
+
+        emailjs.send('service_e7a2vjl', 'template_48snr9b', formData)
+            .then(function(response) {
+                console.log('Email sent successfully!', response);
+                
+                const submitButton = form.querySelector('button');
+                const originalText = submitButton.textContent;
+                const originalClasses = ['bg-white', 'text-gray-900', 'hover:bg-gray-200'];
+                
+                submitButton.textContent = 'Sent! Thank you.';
+                submitButton.classList.remove(...originalClasses);
+                submitButton.classList.add('bg-green-600', 'text-white');
+                
+                form.reset();
+                
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.classList.remove('bg-green-600', 'text-white');
+                    submitButton.classList.add(...originalClasses);
+                }, 3000);
+            }, function(error) {
+                console.error('Email failed to send:', error);
+                
+                const submitButton = form.querySelector('button');
+                submitButton.textContent = 'Error! Try again.';
+                submitButton.classList.remove('bg-white', 'text-gray-900');
+                submitButton.classList.add('bg-red-600', 'text-white');
+                
+                setTimeout(() => {
+                    submitButton.textContent = 'Send Message';
+                    submitButton.classList.remove('bg-red-600', 'text-white');
+                    submitButton.classList.add('bg-white', 'text-gray-900');
+                }, 3000);
+            });
+    });
+</script>
+
+    <script>
+    function updateActiveNav() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('header nav div a[href^="#"]');
+        
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+        
+        if (pageYOffset < 100) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector('header nav div a[href="#hero-section"]').classList.add('active');
+        }
+    }
+        window.addEventListener('scroll', updateActiveNav);
+    window.addEventListener('load', updateActiveNav);
+</script>
+
+</body>
+</html>
